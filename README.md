@@ -21,6 +21,7 @@ Start the socket server
 Open up a browser window at `http://localhost:8080/?user=<name_1>` and another
 at `http://localhost:8080/?user=<other_name>`. And type stuff into the box :)
 
+![image](https://user-images.githubusercontent.com/8541009/30646361-a6509f40-9e10-11e7-9b1f-646952b130d1.png)
 
 ## Todo
 
