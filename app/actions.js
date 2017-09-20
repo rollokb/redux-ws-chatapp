@@ -31,7 +31,7 @@ export const createMessage = (text) => {
 }
 
 export const connectToWs = (user) => {
-  const ws = new WebSocket('ws://localhost:8000/?user=' + user);
+  let ws = new WebSocket('ws://localhost:8000/?user=' + user);
 
   return dispatch => {
     ws.onmessage = (message) => {
