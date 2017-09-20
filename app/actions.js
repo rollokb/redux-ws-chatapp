@@ -1,6 +1,7 @@
 import uuid from 'uuid'
 import store from './store'
 
+let ws;
 
 export const setUp = (user) => {
   return dispatch => {
@@ -31,7 +32,7 @@ export const createMessage = (text) => {
 }
 
 export const connectToWs = (user) => {
-  const ws = new WebSocket('ws://localhost:8000/?user=' + user);
+  ws = new WebSocket('ws://localhost:8000/?user=' + user);
 
   return dispatch => {
     ws.onmessage = (message) => {
