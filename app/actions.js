@@ -1,10 +1,11 @@
 import uuid from 'uuid'
-import store from './store'
+import {store} from './store'
 
 let ws;
 
 export const setUp = (user) => {
-  return dispatch => {
+  return (dispatch, getState) => {
+    const { user } = getState()
     dispatch(setUser(user));
     dispatch(connectToWs(user));
   }

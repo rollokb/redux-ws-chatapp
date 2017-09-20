@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import { routerReducer } from 'react-router-redux'
 
 const user = (user = '', action) => {
   switch (action.type) {
@@ -22,6 +23,6 @@ const messages = (state=[], action) => {
 }
 
 
-const messageApp = combineReducers({messages, user});
+const messageApp = combineReducers({messages, user, routerReducer});
 
 export default messageApp

@@ -8,13 +8,18 @@ import {parse} from 'querystring'
 
 class Thread extends React.Component {
   componentDidMount() {
-    this.props.setUp(parse(window.location.search.substring(1)).user)
+    document.title = 'Chat ' + this.props.user
+    this.props.setUp()
+  }
+
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
       <div>
-        <h1>Chat App</h1>
+        <h1>{this.props.user + "'s Chat"}</h1>
         <ul>
           { this.props.messages.map(m => <Message key={m.id} {...m}/>) }
         </ul>
@@ -35,6 +40,6 @@ Thread.propTypes = {
 export default connect(
   state => state,
   dispatch => ({
-    setUp: u => dispatch(setUp(u)),
+    setUp: u => dispatch(setUp()),
   }),
 )(Thread)
