@@ -1,7 +1,7 @@
 # React Chat App
 
 Simple application with a Redux front end and a simple websocket server that
-broadcasts users' messages to every websocket instance. Largely did this is
+broadcasts users' messages to every websocket instance. Largely did this for
 revision.
 
 ## How to use
